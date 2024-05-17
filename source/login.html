@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+
+    <!-- El Messiri Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Ngelink ke CSS -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+    <div class="container">
+        <img id="formBackground" src="/assets/4.jpg" alt="">
+        <div class="formContainer">
+            <div class="formTitle">
+                <h1>Log In</h1>
+            </div>
+            <form action="/source/homepage.html">
+                <!-- bikin inputan untuk name -->
+            <div id="namaContainer" class="formInputs">
+                <label for="inputName">Name</label>
+                <input type="text" id="inputName" oninput="validateName()">
+                <p class="errorMessage" id="errorName"></p>
+            </div>
+    
+            <!-- bikin inputan untuk email -->
+            <div id="emailContainer" class="formInputs">
+                <label for="inputEmail">Email</label>
+                <input type="text" id="inputEmail" oninput="validateEmail()">
+                <p class="errorMessage" id="errorEmail"></p>
+            </div>
+    
+            <!-- Bikin submit Button -->
+            <div class="submitButtonContainer">
+                <button type="submit" class="btn" id="submitBtn">Log In</button>
+            </div>
+            </form>
+        </div>
+        
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

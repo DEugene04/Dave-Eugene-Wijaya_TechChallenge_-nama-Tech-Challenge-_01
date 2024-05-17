@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <!-- Ngelink ke CSS -->
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    
+    <div class="container">
+        <img id="formBackground" src="/assets/4.jpg" alt="">
+        <div class="formContainer">
+            <div class="formTitle">
+                <h1>Register</h1>
+            </div>
+            <form action="/source/login.html">
+                <!-- bikin inputan untuk name -->
+            <div id="namaContainer" class="formInputs">
+                <label for="inputName">Name</label>
+                <input type="text" id="inputName" oninput="validateName()">
+                <p class="errorMessage" id="errorName"></p>
+            </div>
+    
+            <!-- bikin inputan untuk email -->
+            <div id="emailContainer" class="formInputs">
+                <label for="inputEmail">Email</label>
+                <input type="text" id="inputEmail" oninput="validateEmail()">
+                <p class="errorMessage" id="errorEmail"></p>
+            </div>
+    
+            <!-- bikin inputan untuk gender -->
+            <div id="genderContainer" class="formInputs">
+                <label for="">Gender</label>
+    
+                <div style="display: flex;">
+                    <!-- Radio button male -->
+                    <div id="maleGender" class="radioContainer">
+                        <input type="radio" name="gender" id="inputMale" class="inputGender">
+                        <label for="inputMale">Male</label>
+                    </div>
+    
+                    <!-- Radio Button Female -->
+                    <div id="femaleGender" class="radioContainer">
+                        <input type="radio" name="gender" id="inputFemale" class="inputGender">
+                        <label for="inputFemale">Female</label>
+                    </div> 
+                </div>  
+                <p class="errorMessage" id="errorGender"></p>   
+            </div>
+    
+            <!-- Bikin submit Button -->
+            <div class="submitButtonContainer">
+                <button type="submit" class="btn" id="submitBtn">Submit</button>
+            </div>
+            </form>
+        </div>
+        
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>

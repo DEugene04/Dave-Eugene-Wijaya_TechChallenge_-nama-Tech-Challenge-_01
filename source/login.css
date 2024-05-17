@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "El Messiri", sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    height: 100vh;
+    position: relative;
+}
+.formTitle{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+#formBackground{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.formContainer{
+    border-radius: 3vw;
+    padding: 2vw 4vw 2vw 4vw;
+    position: absolute;
+    right: 10vw;
+    top: 8vw;
+    background-color: rgba(165, 165, 165, 0.342);
+}
+.formInputs{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vw;
+}
+.formInputs label{
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1vw;
+}
+.formInputs input{
+    height: 2vw;
+    width: 30vw;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    margin-top: .5vw;
+    padding: .5vw 1vw;
+    font-size: 1.5vw;
+    color: white;
+}
+.errorMessage{
+    color: #8E2200;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+.submitButtonContainer{
+    display: flex;
+    justify-content: center;
+}
+#submitBtn{
+    padding: .3vw 3.5vw;
+    border-radius: .5vw;
+    font-size: 1.5vw;
+    outline: none;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    margin-top: 2vw;
+    transition: background-color 0.2s ease,  color 0.2s ease;
+    font-family: "El Messiri", sans-serif;
+}
+#submitBtn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #010141;
+    border: none;
+}

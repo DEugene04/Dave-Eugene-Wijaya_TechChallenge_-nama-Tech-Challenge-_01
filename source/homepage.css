@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+    font-family: "El Messiri", sans-serif;
+    overflow-x: hidden;
+}
+.navbarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(black, rgba(0, 0, 0, 0));
+    padding: 1vw 1.5vw 1.5vw;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.logo img{
+    width: 5vw;
+    height: 4vw;
+}
+.navLinks a{
+    font-size: 1.5vw;
+    color: white;
+    text-decoration: none;
+    margin-left: 1vw;
+}
+#registerBtn{
+    padding: .7vw 1.5vw;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition:  0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+#registerBtn:hover{
+    cursor: pointer;
+    background-color: #010141;
+    color: white;
+    transform: scale(.9);
+    border: none;
+}
+#logInBtn{
+    padding: .9vw 1.8vw;
+    background-color: #010141;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+#logInBtn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #010141;
+    transform: scale(.9);
+}
+
+/* Image Carousel CSS */
+.imageContainer{
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), black);
+}
+.imageContainer img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.fadeIn{
+    animation: fadeIn 0.3s ease;
+}
+.arrowLeft{
+    position: absolute;
+    left: 2vw;
+    color: white;
+    top: 20vw;
+    font-size: 4vw;
+}
+.arrowRight{
+    position: absolute;
+    right: 2vw;
+    top: 20vw;
+    font-size: 4vw;
+    color: white;
+}
+@keyframes fadeIn {
+    0%{
+        transform: translateX(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* textContent CSS */
+.textContainer{
+    position: absolute;
+    color: white;
+    top: 15vw;
+    right: 8vw;
+}
+.tagLine{
+    display: flex;
+    gap: 1vw;
+    font-weight: 400;
+    font-size: 2.5vw;
+}
+.focusText1{
+    color: #8E2200;
+    font-weight: 700;
+}
+.focusText2{
+    color: #010141;
+    font-weight: 700;
+}
+.textDescription{
+    margin-top: 1vw;
+    width: 30vw;
+    font-size: 2vw;
+}
+.textDescription h4{
+    font-weight: 400;
+}
+
+/* tdl CSS */
+.contentContainer{
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom right, #000000 , #000037, #010141 );
+    width: 100vw;
+    padding: 5vw 5vw 8vw 5vw;
+}
+
+/* on light mode */
+.contentContainer.active{
+    background-image: linear-gradient(to bottom right, rgb(197, 197, 197), white );
+}
+
+.tdlContainer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+/* on light mode */
+.tdlContainer.active{
+    color: black;
+}
+
+#inputTdl{
+    width: 25vw;
+    height: 3vw;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid white;
+    padding: 1vw .5vw;
+    color: white;
+    margin-bottom: 2vw;
+    font-family: "El Messiri", sans-serif;
+    font-size: 1.5vw;
+}
+
+/* on light mode */
+#inputTdl.active{
+    border: 2px solid black;
+    color: black;
+}
+
+.tdlContainer h3{
+    font-size: 2vw;
+    font-weight: 700;
+}
+
+/* Inputing new Tdl CSS */
+.inputContainer{
+    display: flex;
+    gap: 2vw;
+}
+.inputNewTdl{
+    display: flex;
+    flex-direction: column;
+}
+.addToDo{
+    height: 3vw;
+    width: 3vw;
+    font-size: 2vw;
+    color: #000037;
+    transition: transform 0.1s ease-in;
+    outline: none;
+    border: none;
+}
+
+/* on light mode */
+.addToDo.active{
+    color: white;
+    background-color: #010141;
+    outline: none;
+    border: none;
+}
+
+.addToDo:hover{
+    cursor: pointer;
+    transform: scale(.8);
+}
+
+.error-message{
+    margin: 0;
+
+}
+
+/* To do list lists Content */
+.tdl{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.columnText, .columnCheckBtn, .columnTrashBtn{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+.columnText h3{
+    font-size: 1.5vw;
+    font-weight: 200;
+    margin-right: 4vw;
+}
+.columnCheckBtn button{
+    height: 2vw;
+    width: 2vw;
+    font-size: 1vw;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+.columnCheckBtn button:hover{
+    cursor: pointer;
+}
+.columnTrashBtn button{
+    height: 2vw;
+    width: 2vw;
+    font-size: 1vw;
+    background-color: transparent;
+    border: 1px solid #8E2200;
+    color: #8E2200;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+.columnTrashBtn button:hover{
+    cursor: pointer;
+    background-color: #8E2200;
+    color: white;
+}
+
+/* Pomodoro Timer CSS */
+.pomodoroContainer{
+    background-color: rgb(188, 188, 188, 10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 3vw;
+    width: 35vw;
+    height: 25vw;
+}
+
+/* on light mode */
+.pomodoroContainer.active{
+    background-color: rgba(175, 175, 175, 0.541);
+    color: black;
+}
+
+.workBreakContainer{
+    display: flex;
+    justify-content: space-around;
+    font-size: 2vw;
+}
+.workBreakContainer:hover{
+    cursor: pointer;
+}
+.time{
+    display: flex;
+    justify-content: center;
+    font-size: 6vw;
+}
+.pomodoroBtn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pomodoroBtn button{
+    padding: 1vw 2vw;
+    outline: none;
+    border: none;
+    transition: transform 0.2s ease;
+}
+.pomodoroBtn button:hover{
+    cursor: pointer;
+    transform: scale(.9);
+}
+#startBtn{
+    background-color: #010141;
+    color: white;
+}
+
+#pauseBtn{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+/* on light mode */
+#pauseBtn.active{
+    border: 2px solid black;
+    color: black;
+}
+
+#resetBtn{
+    background-color: #8E2200;
+    color: white;
+}
+.underlined{
+}
+
+/* Light and dark mode */
+.lightDarkContainer{
+    position: fixed;
+    right: 2vw;
+    bottom: 2vw;
+}
+.toggleButton{
+    background-color: #08011d;
+    border-radius: 5vw;
+    padding: .5vw 1vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    box-shadow: inset black 0px 0px .4vw .2vw;
+}
+
+/* on light mode */
+.toggleButton.active{
+    background-color: rgb(255, 255, 137);
+    box-shadow: inset rgb(196, 196, 105) 0px 0px .4vw .2vw;
+}
+
+.toggleButton img{
+    height: 3vw;
+}
+.toggleCircle{
+    width: 4vw;
+    height: 4vw;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 5vw;
+    bottom: 0;
+    transform: scale(.9);
+    transition: 0.5s;
+    box-shadow: inset rgb(170, 170, 170) 0px 0px .4vw .4vw;
+}
+
+/* on light mode */
+.toggleCircle.active {
+    right: 0vw;
+    background-color: #010141;
+    box-shadow: inset rgb(0, 0, 0) 0px 0px .6vw .4vw;
+}
+

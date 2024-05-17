@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="homepage.css">
+
+    <!-- link font awesome -->
+    <script src="https://kit.fontawesome.com/c07884273f.js" crossorigin="anonymous"></script>
+
+    <!-- El Messiri Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar HTML -->
+        <nav class="navbarContainer">
+            <div class="logo">
+                <img src="/assets/logo.png" alt="">
+                <h5>Akoko Nan</h5>
+            </div>
+            <div class="navLinks">
+                <a href="">Home</a>
+                <a href="#content">To Do List</a>
+                <a href="#content">Pomodoro Timer</a>
+                <a href="/source/register.html"><button id="registerBtn">Register</button></a>
+                <a href="/source/login.html"><button id="logInBtn">Log In</button></a>
+                <!-- ADA TUKANGG JADI KITA NORMAL TALK DLU -->
+            </div>
+        </nav>
+
+        <!-- Image HTML -->
+        <div class="imageContainer">
+            <img id="image" src="/assets/1.jpg" alt="Photo 1">
+        </div>
+        <div class="arrowLeft">
+            <i class="fa-solid fa-arrow-left clickLeft"></i>
+        </div>
+        <div class="arrowRight">
+            <i class="fa-solid fa-arrow-right clickRight"></i>
+        </div>
+
+        <!-- text HTML -->
+        <div class="textContainer" id="textContainer1">
+            <div class="textTitle">
+                <div class="tagLine">
+                    <p>Fuel your</p>
+                    <p class="focusText1"><b>AMBITION</b></p>
+                </div>
+                <div class="tagLine">
+                    <p>Master your</p>
+                    <p class="focusText2"><b>DISCIPLINE</b></p>
+                </div>
+            </div>
+            <div class="textDescription">
+                <p>Without the anchor of discipline, ambition becomes nothing but distant dreams and forever out of reach</p>
+            </div>
+        </div>
+
+        <div class="contentContainer" id="content">
+            <div class="tdlContainer">
+                <h3>Add To Do List</h3>
+                <div class="inputContainer">
+                    <div class="inputNewTdl">
+                        <input type="text" id="inputTdl" value="">
+                        <p class="error-message"></p>
+                    </div>
+                    <button class="addToDo"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <h3>My To Do List</h3>
+                <div class="tdl">
+                    <div class="columnText">
+                    </div>
+                    <div class="columnCheckBtn">
+                    </div>
+                    <div class="columnTrashBtn">
+                    </div>
+                </div>
+            </div>
+            <div class="pomodoroContainer">
+                <div class="workBreakContainer">
+                    <h4 id="workText">Work</h4>
+                    <h4 id="breakText">Break</h4>
+                </div>
+                <div class="time">25:00</div>
+                <div class="pomodoroBtn">
+                    <button id="startBtn" onclick="start()">Start</button>
+                    <button id="pauseBtn" onclick="pause()">Pause</button>
+                    <button id="resetBtn" onclick="reset()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- toggle dark and light mode -->
+        <div class="lightDarkContainer">
+            <div class="toggleButton">
+                <img src="/assets/day.png" alt="">
+                <img src="/assets/night.png" alt="">
+                <div class="toggleCircle moveLeft"></div>
+            </div>
+        </div>
+    </div>
+    <script src="homepage.js"></script>
+</body>
+</html>
