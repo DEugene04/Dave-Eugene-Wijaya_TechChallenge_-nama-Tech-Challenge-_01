@@ -6,7 +6,8 @@ let container = document.querySelector('.container')
 let imgArray = [
     "/assets/1.jpg",
     "/assets/2.jpg",
-    "/assets/3.jpg"
+    "/assets/3.jpg",
+    "/assets/5.jpg"
 ]
 let decision = 0;
 
@@ -18,7 +19,7 @@ left.addEventListener('click', function(){
     img.classList.remove("fadeIn")
     setTimeout(() => {
         if (decision == 0){
-            img.src = imgArray[decision = 2]
+            img.src = imgArray[decision = 3]
             img.classList.add("fadeIn")
         } else {
             img.src = imgArray[decision -= 1]
@@ -31,7 +32,7 @@ left.addEventListener('click', function(){
 right.addEventListener('click', function(){
     img.classList.remove("fadeIn")
     setTimeout(() => {
-        if (decision == 2){
+        if (decision == 3){
             img.src = imgArray[decision = 0]
             img.classList.add("fadeIn")
         } else {
@@ -173,6 +174,6 @@ toggleCircle.addEventListener("click", function(){
     inputTdl.classList.toggle("active")
     pomodoroContainer.classList.toggle("active")
     pauseBtn.classList.toggle("active")  
-    toggleButton.classList.toggle("active")  
+    toggleButton.classList.toggle("active")
 })
 
